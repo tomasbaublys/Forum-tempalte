@@ -18,6 +18,16 @@ class CreateThreadsTest extends TestCase
     	$thread = make('App\Thread');
     	$this->post('/threads', $thread->toArray());
     }
+     /**
+     * @test
+     */ 
+    function quests_cannot_see_the_create_threads_page()
+    {
+
+        $this->withExceptionHandling()
+        ->get('/threads/create')
+        ->assertRedirect('/login');
+    }
     /**
      * @test
      */
