@@ -9,18 +9,14 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class CreateThreadsTest extends TestCase
 {
 	use RefreshDatabase;
-    /**
-     * @test
-     */ 
+    /**@test*/ 
     function quests_may_not_create_threads()
     {
     	$this->expectException('Illuminate\Auth\AuthenticationException');
     	$thread = make('App\Thread');
     	$this->post('/threads', $thread->toArray());
     }
-     /**
-     * @test
-     */ 
+    /**@test*/ 
     function quests_cannot_see_the_create_threads_page()
     {
 
@@ -28,9 +24,7 @@ class CreateThreadsTest extends TestCase
         ->get('/threads/create')
         ->assertRedirect('/login');
     }
-    /**
-     * @test
-     */
+    /**@test*/ 
     function an_authenticated_user_can_create_new_forum_threads()
     {
     	// Given we have a signed in user
