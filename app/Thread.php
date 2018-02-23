@@ -10,7 +10,7 @@ class Thread extends Model
 
     public function path()
     {
-    	return '/threads/' . $this->id;
+        return "/threads/{$this->channel->slug}/{$this->id}";
     }
 
    	public function replies()
@@ -22,6 +22,11 @@ class Thread extends Model
    	{
    		return $this->belongsTo(User::class, 'user_id');
    	}
+
+    public function channel()    
+    {
+      return $this->belongsTo(Channel::class);
+    }
 
     public function addReply($reply)
     {
