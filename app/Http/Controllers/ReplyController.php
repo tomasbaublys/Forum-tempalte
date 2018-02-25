@@ -35,6 +35,7 @@ class ReplyController extends Controller
     /**
      * Store a newly created resource in storage.
      *
+     * @param $channelId
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
