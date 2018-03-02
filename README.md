@@ -1,1 +1,1 @@
-<h1>A forum based on Laracasts Let's Build A Forum with Laravel and TDD series</h1>
+<h1>A forum based on Laracasts Let's Build A Forum with Laravel and TDD (test driven development) series</h1>
